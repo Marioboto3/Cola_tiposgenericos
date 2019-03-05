@@ -1,4 +1,8 @@
 package Cola_tiposgenericos;
 
-public interface Queue <E>{
+import java.util.Collection;
+
+public interface Queue <E> extends Collection<E> {
+    
+
 }
