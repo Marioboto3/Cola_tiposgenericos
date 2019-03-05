@@ -1,6 +1,6 @@
 package Cola_tiposgenericos;
 
-public class QueueImpl <E> implements Queue <E> {
+public abstract class QueueImpl <E> implements Queue <E> {
 
     @Override
     public void push(E e) {
