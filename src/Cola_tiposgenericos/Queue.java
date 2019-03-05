@@ -2,7 +2,7 @@ package Cola_tiposgenericos;
 
 public interface Queue <E> {
 
-    void push (E e);
+    public void push (E e) throws new QueueFullException();
     E pop ();
     int size();
 
