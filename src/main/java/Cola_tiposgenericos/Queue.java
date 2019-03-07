@@ -6,7 +6,7 @@ public interface Queue <E> {
     void push (E e) throws QueueFullException;
 
     //Get the first element of the queue and shifts other elements
-    E pop ();
+    E pop () throws  QueueEmptyException;
 
     //Get the number of elements in the queue
     int size();
