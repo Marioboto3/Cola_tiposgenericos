@@ -21,7 +21,7 @@ public class QueueImpl <E> implements Queue <E> {
     public E pop() throws QueueEmptyException {
         if (this.isEmpty()) throw new QueueEmptyException();
         E first = this.data[0];
-        //TODO: Shift
+        shift();
         this.p--;
         return first;
     }
@@ -39,5 +39,12 @@ public class QueueImpl <E> implements Queue <E> {
     //isEmpty
     private boolean isEmpty() {
         return (this.p == 0);
+    }
+
+    //shift
+    private void shift() {
+        for (int i = 0; i < this.p; i++) {
+            this.data[i] = this.data[i + 1];
+        }
     }
 }
