@@ -11,6 +11,26 @@ public class QueueImpl <E> implements Queue <E> {
         this.data = (E[]) new Object[len];
     }
 
+    //Push Method
+    public void push(E e) throws QueueFullException {
+        if (this.isFull()) throw new QueueFullException();
+        this.data[this.p++] = e;
+    }
+
+    //Pop Method
+    public E pop() throws QueueEmptyException {
+        if (this.isEmpty()) throw new QueueEmptyException();
+        E first = this.data[0];
+        //TODO: Shift
+        this.p--;
+        return first;
+    }
+
+    //Size Method
+    public int size() {
+        return this.p;
+    }
+
     //isFull
     private boolean isFull() {
         return (this.size() == this.data.length);
@@ -19,28 +39,5 @@ public class QueueImpl <E> implements Queue <E> {
     //isEmpty
     private boolean isEmpty() {
         return (this.p == 0);
-    }
-
-    //Push Method
-    @Override
-    public void push(E e) throws QueueFullException {
-        if (this.isFull()) throw new QueueFullException("Queue is full");
-        this.data[this.p++] = e;
-    }
-
-    //Pop Method
-    @Override
-    public E pop() /*TODO: throws QueueEmptyException*/ {
-        if (this.isEmpty()) /*TODO: throw new QueueEmptyException()*/ ;
-        E first = this.data[0];
-        //TODO: Shift
-        this.p--;
-        return first;
-    }
-
-    //Size Method
-    @Override
-    public int size() {
-        return this.p;
     }
 }
