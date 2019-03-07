@@ -30,8 +30,8 @@ public class QueueImpl <E> implements Queue <E> {
 
     //Pop Method
     @Override
-    public E pop() //TODO: throws QueueEmptyException {
-        if (this.isEmpty()) //TODO: throw new QueueEmptyException();
+    public E pop() /*TODO: throws QueueEmptyException*/ {
+        if (this.isEmpty()) /*TODO: throw new QueueEmptyException()*/ ;
         E first = this.data[0];
         //TODO: Shift
         this.p--;
