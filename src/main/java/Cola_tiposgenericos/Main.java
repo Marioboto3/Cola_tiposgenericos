@@ -3,10 +3,9 @@ package Cola_tiposgenericos;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
 
+        Queue<Integer> queueint = new QueueImpl<Integer>(10);
+        Queue<String> queuestring = new QueueImpl<String>(4);
 
-        Queue<Integer> q = new QueueImpl<Integer>(10);
-        //Queue<User> q = new
     }
 }
