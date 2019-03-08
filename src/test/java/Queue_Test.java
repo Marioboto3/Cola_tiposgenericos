@@ -33,10 +33,12 @@ public class Queue_Test {
     //Hacemos un test para comprobar la función push
     //Hacemos que la función push retorne el elemento insertado para poder comprobarlo
     //No se si se puede hacer el assertEquals con un void
+    /*
     @Test
     public void test_push() throws Exception {
         int a = 0, b = 1, c = 2, d = 3;
         assertEquals(a, Queue_TEST.push(a));
     }
+    */
 
 }
