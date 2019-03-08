@@ -3,8 +3,8 @@ package Cola_tiposgenericos;
 public class QueueImpl <E> implements Queue <E> {
 
     //Attributes
-    E[] data;       //Queue
-    int p;          //Number of elements
+    private E[] data;       //Queue
+    private int p;          //Number of elements
 
     //Constructor
     public QueueImpl(int len) {
@@ -22,10 +22,12 @@ public class QueueImpl <E> implements Queue <E> {
     }
 
     //Push Method
+    //Comento el throws exception porque no se como hacer lo en el test
     @Override
-    public void push(E e) throws QueueFullException {
+    public E push(E e) throws QueueFullException {
         if (this.isFull()) throw new QueueFullException("Queue is full");
         this.data[this.p++] = e;
+        return e;
     }
 
     //Pop Method
