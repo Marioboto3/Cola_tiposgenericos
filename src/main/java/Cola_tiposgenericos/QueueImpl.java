@@ -43,7 +43,7 @@ public class QueueImpl <E> implements Queue <E> {
 
     //shift
     private void shift() {
-        for (int i = 0; i < this.p; i++) {
+        for (int i = 0; i < this.p-1; i++) {
             this.data[i] = this.data[i + 1];
         }
     }
